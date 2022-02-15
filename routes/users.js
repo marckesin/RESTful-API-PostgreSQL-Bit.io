@@ -13,7 +13,7 @@ router.put("/users/:id", usersController.userUpdate);
 
 router.delete("/users/:id", usersController.userDelete);
 
-router.use("*", (req, res, next) => {
+router.use("*", (req, res) => {
   res.status(404).send("Endpoint not found.");
 });
 
