@@ -9,13 +9,6 @@ const pool = new Pool({
   port: process.env.PGPORT,
 });
 
-// pool.query(
-//   'SELECT * FROM "marckesin/RESTful-API-PostgreSQL-Bit.io"."application_user"',
-//   (err, res) => {
-//     console.log(err, res);
-//   },
-// );
-
 module.exports = {
   query: (text, params) => pool.query(text, params),
   end: callback => pool.end(callback),

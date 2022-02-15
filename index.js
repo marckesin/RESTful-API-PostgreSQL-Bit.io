@@ -1,9 +1,11 @@
 const express = require("express");
 const mountRoutes = require("./routes/index");
 
+const port = process.env.PORT || 3000;
 const app = express();
 
-const port = process.env.PORT || 3000;
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 mountRoutes(app);
 
