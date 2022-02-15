@@ -4,12 +4,15 @@
 
 API simples seguindo o padrão REST desenvolvida em Node/Express. Integração de banco de dados PostgreSQL usando DBaaS [Bit.io](https://www.bit.io).
 
-### Endpoints
-
----
+## Endpoints
 
 - GET - /users
 - GET by id - /users/id
 - POST - /users
 - PUT - /users/id
 - DELETE - /users/id
+
+## Ferramentas
+
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white)
+[Thunder Client](https://www.thunderclient.com/)
