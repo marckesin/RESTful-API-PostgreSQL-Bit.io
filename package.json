@@ -1,0 +1,28 @@
+{
+  "name": "restful-api-postgresql-bit.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "devstart": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marckesin/RESTful-API-PostgreSQL-Bit.io.git"
+  },
+  "author": "Ronaldo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marckesin/RESTful-API-PostgreSQL-Bit.io/issues"
+  },
+  "homepage": "https://github.com/marckesin/RESTful-API-PostgreSQL-Bit.io#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
