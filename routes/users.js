@@ -3,6 +3,10 @@ const usersController = require("../controllers/usersController");
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send('<a href="/users">/users</a>');
+});
+
 router.get("/users", usersController.userGetAll);
 
 router.get("/users/:id", usersController.userGetById);
