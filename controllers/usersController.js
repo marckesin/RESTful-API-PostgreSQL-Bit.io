@@ -7,7 +7,7 @@ exports.userGetAll = async (req, res, next) => {
       'SELECT uuid, username FROM "marckesin/RESTful-API-PostgreSQL-Bit.io"."application_user"',
       [],
     );
-    res.status(200).send(rows);
+    return res.status(200).send(rows);
   } catch (error) {
     next(error);
   }
@@ -25,7 +25,7 @@ exports.userGetById = async (req, res, next) => {
     if (rowCount) {
       return res.status(200).send(rows[0]);
     }
-    res.sendStatus(404);
+    return res.sendStatus(404);
   } catch (error) {
     next(error);
   }
@@ -43,8 +43,8 @@ exports.userCreate = async (req, res, next) => {
     if (rowCount) {
       return res.status(201).send("User created.");
     }
-    res.sendStatus(400);
-  } catch (SyntaxError) {
+    return res.sendStatus(404);
+  } catch (error) {
     next(error);
   }
 };
@@ -62,7 +62,7 @@ exports.userUpdate = async (req, res, next) => {
     if (rowCount) {
       return res.status(200).send("User updated.");
     }
-    res.sendStatus(404);
+    return res.sendStatus(404);
   } catch (error) {
     next(error);
   }
@@ -80,7 +80,7 @@ exports.userDelete = async (req, res, next) => {
     if (rowCount) {
       return res.status(200).send("User deleted.");
     }
-    res.sendStatus(400);
+    return res.sendStatus(404);
   } catch (error) {
     next(error);
   }

@@ -7,18 +7,25 @@ router.get("/", (req, res) => {
   res.send('<a href="/users">/users</a>');
 });
 
-router.get("/users", usersController.userGetAll);
+router
+  .route("/users")
+  .get(usersController.userGetAll)
+  .post(usersController.userCreate);
 
-router.get("/users/:id", usersController.userGetById);
+router
+  .route("/users/:id")
+  .get(usersController.userGetById)
+  .put(usersController.userUpdate)
+  .delete(usersController.userDelete);
 
-router.post("/users", usersController.userCreate);
-
-router.put("/users/:id", usersController.userUpdate);
-
-router.delete("/users/:id", usersController.userDelete);
-
-router.use("*", (req, res) => {
+router.all("*", (req, res) => {
   res.status(404).send("Endpoint not found.");
+});
+
+router.use((err, req, res, next) => {
+  res.locals.message = err.message;
+
+  res.status(err.status || 500).send(err.message);
 });
 
 module.exports = router;
