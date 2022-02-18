@@ -24,8 +24,10 @@ router.all("*", (req, res) => {
 
 router.use((err, req, res, next) => {
   res.locals.message = err.message;
-
-  res.status(err.status || 500).send(err.message);
+  res
+    .status(err.status || 500)
+    .json({ method: req.method, error: err.message });
+  next();
 });
 
 module.exports = router;
