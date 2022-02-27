@@ -6,11 +6,35 @@ API simples seguindo o padrão REST desenvolvida em Node/Express. Integração d
 
 ## Endpoints
 
-- GET - /users
-- GET by id - /users/id
-- POST - /users
-- PUT - /users/id
-- DELETE - /users/id
+Ler todos registros:
+
+```HTTP
+GET /users
+```
+
+Ler um registro específico:
+
+```HTTP
+GET /users/id
+```
+
+Criar um novo registro:
+
+```HTTP
+POST /users
+```
+
+Atualizar um registro:
+
+```HTTP
+PUT /users/id
+```
+
+Apagar um registro:
+
+```HTTP
+DELETE /users/id
+```
 
 ## Ferramentas
 
