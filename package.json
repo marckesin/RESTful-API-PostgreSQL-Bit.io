@@ -18,7 +18,8 @@
     "express",
     "rest api",
     "postgresql",
-    "dbaas"
+    "dbaas",
+    "api"
   ],
   "bugs": {
     "url": "https://github.com/marckesin/RESTful-API-PostgreSQL-Bit.io/issues"
