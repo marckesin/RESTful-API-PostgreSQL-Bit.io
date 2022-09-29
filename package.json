@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/marckesin/RESTful-API-PostgreSQL-Bit.io#readme",
   "dependencies": {
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "express": "^4.17.2",
     "helmet": "^6.0.0",
     "pg": "^8.8.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.20"
   }
 }
